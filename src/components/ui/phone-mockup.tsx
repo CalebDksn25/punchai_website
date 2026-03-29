@@ -13,10 +13,7 @@ export function PhoneMockup({ children, className = "" }: PhoneMockupProps) {
       <div className="relative w-[280px] h-[580px] rounded-[3rem] bg-gradient-to-b from-zinc-700 to-zinc-800 p-[3px] shadow-[0_20px_60px_rgba(0,0,0,0.5)]">
         {/* Inner bezel */}
         <div className="relative w-full h-full rounded-[2.85rem] bg-carbon overflow-hidden">
-          {/* Dynamic Island */}
-          <div className="absolute top-3 left-1/2 -translate-x-1/2 w-[100px] h-[28px] bg-black rounded-full z-10 flex items-center justify-center">
-            <div className="w-2 h-2 rounded-full bg-zinc-800" />
-          </div>
+          {/* Dynamic Island - hidden when video content provides its own */}
 
           {/* Screen reflection */}
           <div className="absolute inset-0 bg-gradient-to-br from-white/[0.03] via-transparent to-transparent z-[5] pointer-events-none" />

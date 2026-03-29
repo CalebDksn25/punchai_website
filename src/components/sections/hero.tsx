@@ -108,7 +108,16 @@ export function Hero() {
             {/* Glow behind phone */}
             <div className="absolute -inset-12 bg-strike-red/[0.08] rounded-full blur-[60px]" />
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200px] h-[200px] bg-strike-red/10 rounded-full blur-[40px]" />
-            <PhoneMockup />
+            <PhoneMockup>
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="absolute inset-0 w-full h-full object-cover"
+                src="/videos/demo.mov"
+              />
+            </PhoneMockup>
           </motion.div>
         </motion.div>
       </div>

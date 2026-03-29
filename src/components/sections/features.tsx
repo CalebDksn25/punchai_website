@@ -7,6 +7,7 @@ import {
   Swords,
   Calendar,
   Video,
+  BarChart3,
 } from "lucide-react";
 import { fadeInUp, staggerContainer } from "@/lib/animations";
 import { FEATURES } from "@/lib/constants";
@@ -17,6 +18,7 @@ const iconMap = {
   Swords,
   Calendar,
   Video,
+  BarChart3,
 } as const;
 
 export function Features() {
@@ -43,7 +45,7 @@ export function Features() {
             TO <span className="text-gradient-red">LEVEL UP</span>
           </h2>
           <p className="mt-6 text-steel text-lg max-w-xl mx-auto leading-relaxed">
-            Five powerful tools designed to sharpen every aspect of your boxing
+            Six powerful tools designed to sharpen every aspect of your boxing
             game.
           </p>
         </motion.div>

@@ -38,6 +38,12 @@ export const FEATURES = [
     description:
       "Upload your footage and receive AI-powered form analysis with actionable tips to improve.",
   },
+  {
+    icon: "BarChart3" as const,
+    title: "Track Your Progress",
+    description:
+      "Monitor your training stats, punch accuracy, and improvement over time with detailed performance insights.",
+  },
 ] as const;
 
 export const STEPS = [
