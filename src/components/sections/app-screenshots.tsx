@@ -1,25 +1,25 @@
 "use client";
 
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer, scaleIn } from "@/lib/animations";
 import { PhoneMockup } from "@/components/ui/phone-mockup";
-import { Target, Calendar, Video } from "lucide-react";
 
 const screens = [
   {
-    label: "AI Pad Work",
-    icon: Target,
-    color: "from-strike-red/20 to-strike-red/5",
+    label: "Guided Workouts",
+    type: "video" as const,
+    src: "/videos/appex2.mov",
   },
   {
-    label: "Training Plans",
-    icon: Calendar,
-    color: "from-white/10 to-white/[0.02]",
+    label: "AI Pad Work",
+    type: "image" as const,
+    src: "/screenshots/padworkex.png",
   },
   {
     label: "Video Analysis",
-    icon: Video,
-    color: "from-strike-red/15 to-strike-red/5",
+    type: "video" as const,
+    src: "/videos/appex1.mov",
   },
 ];
 
@@ -49,9 +49,7 @@ export function AppScreenshots() {
         </motion.div>
 
         <div className="flex flex-col md:flex-row items-end justify-center gap-8 md:gap-10">
-          {screens.map((screen, i) => {
-            const Icon = screen.icon;
-            return (
+          {screens.map((screen, i) => (
               <motion.div
                 key={screen.label}
                 variants={scaleIn}
@@ -62,34 +60,29 @@ export function AppScreenshots() {
                 }`}
               >
                 <PhoneMockup>
-                  <div className="flex flex-col items-center justify-center h-full px-6">
-                    {/* Mock app UI */}
-                    <div
-                      className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${screen.color} flex items-center justify-center mb-4 border border-white/[0.06]`}
-                    >
-                      <Icon className="w-7 h-7 text-white/60" />
-                    </div>
-                    <p className="text-white text-sm font-medium tracking-wide">
-                      {screen.label}
-                    </p>
-                    <div className="mt-8 space-y-3 w-full px-2">
-                      <div className="h-8 bg-white/[0.03] rounded-xl border border-white/[0.04]" />
-                      <div className="h-8 bg-white/[0.03] rounded-xl border border-white/[0.04] w-4/5" />
-                      <div className="h-8 bg-white/[0.03] rounded-xl border border-white/[0.04] w-3/5" />
-                      <div className="mt-4 h-10 bg-strike-red/10 rounded-xl border border-strike-red/20 flex items-center justify-center">
-                        <span className="text-strike-red text-[10px] font-medium tracking-wider uppercase">
-                          Start Session
-                        </span>
-                      </div>
-                    </div>
-                  </div>
+                  {screen.type === "video" ? (
+                    <video
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="absolute inset-0 w-full h-full object-cover"
+                      src={screen.src}
+                    />
+                  ) : (
+                    <Image
+                      src={screen.src}
+                      alt={screen.label}
+                      fill
+                      className="object-cover"
+                    />
+                  )}
                 </PhoneMockup>
                 <p className="text-center text-steel text-xs mt-5 tracking-widest uppercase">
                   {screen.label}
                 </p>
               </motion.div>
-            );
-          })}
+            ))}
         </div>
       </div>
     </motion.section>
