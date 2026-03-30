@@ -1,4 +1,11 @@
 import Image from "next/image";
+import Link from "next/link";
+
+const footerLinks = [
+  { label: "Privacy Policy", href: "/privacy" },
+  { label: "Terms of Service", href: "/terms" },
+  { label: "Contact", href: "/contact" },
+];
 
 export function Footer() {
   return (
@@ -31,19 +38,17 @@ export function Footer() {
               LINKS
             </h4>
             <ul className="space-y-3">
-              {["Privacy Policy", "Terms of Service", "Contact"].map(
-                (link) => (
-                  <li key={link}>
-                    <a
-                      href="#"
-                      className="text-steel text-sm hover:text-white transition-colors duration-300 inline-flex items-center gap-1 group"
-                    >
-                      <span className="w-0 h-[1px] bg-strike-red transition-all duration-300 group-hover:w-3" />
-                      {link}
-                    </a>
-                  </li>
-                )
-              )}
+              {footerLinks.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-steel text-sm hover:text-white transition-colors duration-300 inline-flex items-center gap-1 group"
+                  >
+                    <span className="w-0 h-[1px] bg-strike-red transition-all duration-300 group-hover:w-3" />
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
