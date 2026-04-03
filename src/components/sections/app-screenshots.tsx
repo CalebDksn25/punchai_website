@@ -8,16 +8,19 @@ import { PhoneMockup } from "@/components/ui/phone-mockup";
 const screens = [
   {
     label: "Guided Workouts",
+    alt: "Punch AI guided boxing workout screen showing real-time punch tracking and drill instructions",
     type: "video" as const,
     src: "/videos/appex2.mov",
   },
   {
     label: "AI Pad Work",
+    alt: "Punch AI pad work training screen with AI-powered pose detection tracking boxing form in real-time",
     type: "image" as const,
     src: "/screenshots/padworkex.png",
   },
   {
     label: "Video Analysis",
+    alt: "Punch AI video analysis screen providing AI-powered boxing form feedback and improvement tips",
     type: "video" as const,
     src: "/videos/appex1.mov",
   },
@@ -66,13 +69,14 @@ export function AppScreenshots() {
                       loop
                       muted
                       playsInline
+                      aria-label={screen.alt}
                       className="absolute inset-0 w-full h-full object-cover"
                       src={screen.src}
                     />
                   ) : (
                     <Image
                       src={screen.src}
-                      alt={screen.label}
+                      alt={screen.alt}
                       fill
                       className="object-cover"
                     />

@@ -14,30 +14,74 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Punch AI - Your AI Boxing Coach",
+  metadataBase: new URL("https://punchai.app"),
+  title: {
+    default: "Punch AI - AI-Powered Boxing Coach | Train Smarter, Hit Harder",
+    template: "%s | Punch AI",
+  },
   description:
-    "Train smarter with AI-powered boxing coaching. Defensive drills, offensive combos, personalized training plans, and video feedback — all in your pocket.",
+    "Train smarter with Punch AI, your AI-powered boxing coach. Real-time pose detection, defensive drills, offensive combos, personalized training plans, and AI video feedback — all on your iPhone.",
   keywords: [
-    "boxing",
-    "AI coach",
-    "boxing training",
-    "boxing drills",
-    "fitness app",
-    "punch AI",
+    "AI boxing coach",
+    "boxing training app",
+    "AI boxing training",
+    "shadow boxing app",
+    "boxing drills app",
+    "AI pad work",
+    "boxing workout app",
+    "learn boxing at home",
+    "boxing form analysis",
+    "AI fitness coach",
+    "combat sports training app",
+    "punch tracking app",
+    "boxing defense drills",
+    "personalized boxing training",
+    "boxing video analysis",
+    "boxing app for iPhone",
+    "Punch AI",
   ],
+  authors: [{ name: "Punch AI" }],
+  creator: "Punch AI",
+  publisher: "Punch AI",
+  applicationName: "Punch AI",
+  alternates: {
+    canonical: "https://punchai.app",
+  },
   openGraph: {
-    title: "Punch AI - Your AI Boxing Coach",
+    title: "Punch AI - AI-Powered Boxing Coach",
     description:
-      "Train smarter with AI-powered boxing coaching. Defensive drills, offensive combos, personalized training plans, and video feedback.",
-    type: "website",
+      "Train smarter with AI-powered boxing coaching. Real-time pose detection, defensive drills, offensive combos, personalized training plans, and AI video feedback.",
+    url: "https://punchai.app",
     siteName: "Punch AI",
+    type: "website",
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Punch AI - Your AI Boxing Coach",
+    title: "Punch AI - AI-Powered Boxing Coach",
     description:
-      "Train smarter with AI-powered boxing coaching. Defensive drills, offensive combos, personalized training plans, and video feedback.",
+      "Train smarter with AI-powered boxing coaching. Drills, combos, video feedback, and personalized training plans.",
+    creator: "@punchai_app",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  other: {
+    "apple-itunes-app": "app-id=0000000000",
+    "al:ios:app_store_id": "0000000000",
+    "al:ios:app_name": "Punch AI",
+    "al:ios:url": "punchai://",
+    "al:web:url": "https://punchai.app",
+  },
+  category: "fitness",
 };
 
 export default function RootLayout({

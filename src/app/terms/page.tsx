@@ -4,8 +4,12 @@ import Link from "next/link";
 import { Footer } from "@/components/sections/footer";
 
 export const metadata: Metadata = {
-  title: "Terms of Service - Punch AI",
-  description: "Terms of Service for Punch AI, your AI-powered boxing coach.",
+  title: "Terms of Service",
+  description:
+    "Terms of Service for Punch AI. Understand subscription plans, health disclaimers, data ownership, and usage guidelines for the AI boxing coach app.",
+  alternates: {
+    canonical: "https://punchai.app/terms",
+  },
 };
 
 export default function TermsPage() {

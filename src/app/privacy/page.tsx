@@ -4,8 +4,12 @@ import Link from "next/link";
 import { Footer } from "@/components/sections/footer";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy - Punch AI",
-  description: "Privacy Policy for Punch AI, your AI-powered boxing coach.",
+  title: "Privacy Policy",
+  description:
+    "Privacy Policy for Punch AI. Learn how we protect your data, process camera input on-device, and keep your boxing training information secure.",
+  alternates: {
+    canonical: "https://punchai.app/privacy",
+  },
 };
 
 export default function PrivacyPage() {

@@ -4,8 +4,12 @@ import Link from "next/link";
 import { Footer } from "@/components/sections/footer";
 
 export const metadata: Metadata = {
-  title: "Contact - Punch AI",
-  description: "Get in touch with the Punch AI team.",
+  title: "Contact",
+  description:
+    "Get in touch with the Punch AI team. Reach us via email at support@punchai.app or follow us on Instagram and TikTok.",
+  alternates: {
+    canonical: "https://punchai.app/contact",
+  },
 };
 
 export default function ContactPage() {
