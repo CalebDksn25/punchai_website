@@ -24,7 +24,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/privacy`,
-      lastModified: new Date("2026-03-29"),
+      lastModified: new Date("2026-04-10"),
       changeFrequency: "yearly",
       priority: 0.3,
     },
