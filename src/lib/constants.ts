@@ -1,5 +1,5 @@
 export const APP_STORE_URL =
-  "https://apps.apple.com/app/punch-ai/id0000000000";
+  "https://apps.apple.com/us/app/punch-ai-boxing-coach/id6761316809";
 
 export const NAV_LINKS = [
   { label: "Features", href: "#features" },
