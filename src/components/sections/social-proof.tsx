@@ -17,6 +17,7 @@ function AnimatedNumber({ value }: { value: string }) {
   useEffect(() => {
     if (!isInView) return;
     const target = parseFloat(numericPart);
+    const hasDecimal = numericPart.includes(".");
     const duration = 1500;
     const start = performance.now();
 
@@ -26,7 +27,7 @@ function AnimatedNumber({ value }: { value: string }) {
       const eased = 1 - Math.pow(1 - progress, 3);
       const current = target * eased;
 
-      if (target % 1 !== 0) {
+      if (hasDecimal) {
         setDisplay(current.toFixed(1));
       } else {
         setDisplay(Math.floor(current).toLocaleString());

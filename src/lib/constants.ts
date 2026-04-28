@@ -71,30 +71,30 @@ export const STEPS = [
 
 export const TESTIMONIALS = [
   {
-    name: "Marcus T.",
-    role: "Amateur Boxer",
+    name: "Mitchell Reed",
+    role: "Pro Muay Thai",
     quote:
-      "Punch AI completely changed how I train solo. The pad work drills feel like having a real coach calling shots.",
+      "Punch AI is the closest thing to having a coach in your living room. I use it between camps to stay sharp and the drills actually push me.",
     rating: 5,
   },
   {
-    name: "Sarah K.",
-    role: "Fitness Enthusiast",
+    name: "James S.",
+    role: "Boxer",
     quote:
-      "I've never boxed before but the training plans made it so easy to start. I'm hooked and seeing real progress.",
+      "The pad work calls feel real — I'm reacting, not just throwing combos. My solo sessions don't feel like a downgrade from gym days anymore.",
     rating: 5,
   },
   {
-    name: "David R.",
-    role: "MMA Fighter",
+    name: "Braydon Johnston",
+    role: "MMA",
     quote:
-      "The video feedback feature is a game changer. It caught flaws in my form that I never would have noticed on my own.",
+      "Video feedback caught form issues I'd been getting away with for years. It's like having a second set of eyes every round.",
     rating: 5,
   },
 ] as const;
 
 export const STATS = [
-  { value: "50K+", label: "Downloads" },
-  { value: "4.9", label: "Star Rating" },
+  { value: "100+", label: "Downloads" },
+  { value: "5.0", label: "Star Rating" },
   { value: "#1", label: "Boxing App" },
 ] as const;
